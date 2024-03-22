@@ -20,7 +20,7 @@ const projects=[
         "description":"Converting handwritten answers to text and grading them accordingly.",
         "software":["Flask","ChartJS","keras","Pandas"],
         "github":"https://github.com/RitikMody/Auto-Grade",
-        "link":"https://auto--grade.herokuapp.com/",
+        "link":null,
         "category":""
     },
     {
@@ -28,7 +28,7 @@ const projects=[
         "description":"It is a visualisation website for COVID-19.",
         "software":["Flask","ChartJS","GeoPandas"],
         "github":"https://github.com/RitikMody/defeatcorona",
-        "link":"https://defeatcorona.herokuapp.com/",
+        "link":null,
         "category":""
     },
     {
@@ -36,7 +36,7 @@ const projects=[
         "description":"It is an elearning website for different coding languages.",
         "software":["PHP"],
         "github":"https://github.com/RitikMody/Learn2Code",
-        "link":"https://learn2codeforfree.000webhostapp.com/",
+        "link":null,
         "category":""
     },
     {
@@ -52,7 +52,7 @@ const projects=[
         "description":"A one stop solution to navigate the endless sea of online courses.",
         "software":["Flask","Scrapy","Selenium","Pandas"],
         "github":"https://github.com/RitikMody/Coursearch",
-        "link":"https://coursearch.herokuapp.com/",
+        "link":null,
         "category":""
     },
     {
@@ -76,7 +76,7 @@ const projects=[
         "description":"A reminder web app that reminds via email 📧.",
         "software":["NodeJS","ExpressJS","nodemailer","node-schedule"],
         "github":"https://github.com/RitikMody/Email-Reminder",
-        "link":"https://mail-reminder.herokuapp.com/",
+        "link":null,
         "category":""
     },
     {
