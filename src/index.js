@@ -298,9 +298,10 @@ $('.body-dark').on("click",toggle);
 
 document.onreadystatechange = function() { 
 	var storedTheme = localStorage.getItem("theme");
-	if  ((!storedTheme) || (storedTheme === "dark")) {
+	if  ((!storedTheme) || (storedTheme === "light")) {
+		
+    lightTheme();
+	} else if (storedTheme === "dark") {
 		darkTheme();
-	} else if (storedTheme === "light") {
-		lightTheme();
 	} 
 }
