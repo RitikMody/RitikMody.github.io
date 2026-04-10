@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
+
+:root {
+    --footer: #21252b;
+    --nav: #333842;
+    --body: #282c34;
+    --text: #909295;
+    --active: #f3f3f3;
+    --heading: #42a5f5;
+}
+[theme="light"]{
+    --footer: #f3f3f3;
+    --nav: #f3f3f3;
+    --body: #fff;
+    --text: #949494;
+    --active: #050505;
+    --heading: #42a5f5;
+} 
+body{
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+    background-color: var(--body);
+}
+
+/* Mobile */
+.hide{
+    display: none;
+}
+.heading{
+    font-family: 'Roboto Mono', monospace;
+    font-size: xx-large;
+}
+/* Header */
+.topnav{
+    background-color: var(--footer);
+    position: fixed;
+    left: 25%;
+    padding: 0.2% 0 0 0;
+    width: 75%;
+    z-index: 1;
+    font-family: 'Roboto Mono', monospace;
+    padding: 5px 0;
+}
+.tab{
+    border-right: 1px solid rgba(134, 137, 141, 0.459);
+    padding: 0.5% 2%;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: var(--text);
+}
+a:hover{
+    color: var(--active);
+}
+.active-tab{
+    background-color: var(--body);
+    border: unset;
+    border-right: 1px solid rgba(134, 137, 141, 0.459);
+}
+
+.active-tab>span>a{
+    color: var(--active) !important;
+}
+.cross{
+    background-color: var(--nav);
+    all: unset;
+    color: var(--text);
+    margin: 0 0 0 10px;
+    /* padding: 0 0.8%; */
+}
+button:hover{
+    color: var(--heading);
+}
+/* Navbar */
+svg{
+    position: relative;
+    width: 80%;
+}
+text{
+    fill: var(--heading) !important;
+}
+nav {
+    font-size: 20px;
+    background-color: var(--nav);
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    box-shadow: -1px -4px 10px -2px rgba(0,0,0,1);
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding-top: 20px;
+    font-family: 'Roboto Mono', monospace;
+  }
+.navbar{
+    padding-left: 10%;
+}
+.navbar_items{
+    margin-left: 10%;
+    padding-left: 3% !important;
+    box-sizing: border-box;
+}
+.fa-palette{
+    font-size: xxx-large !important;
+}
+.block-picker{
+    background-color: var(--body) !important;
+} 
+.MuiDialog-container.MuiDialog-scrollPaper > div > div > div > div:nth-child(2) > div{
+    display: none !important;
+}
+#rc-editable-input-1{
+    color: var(--heading) !important;
+    background-color: var(--body) !important;
+}
+.color-picker{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 40px 10px;
+}
+.MuiDialogContent-root{
+    /* padding: 0 !important; */
+    text-align: center;
+    text-align: -webkit-center;
+    padding:  10px !important;
+}
+.MuiDialogContent-root>p{
+    color: var(--text);
+    font-family: 'Roboto Mono', monospace;
+}
+.block-picker > div:nth-child(1){
+    display: none !important;
+}
+.MuiButtonBase-root{
+    padding: 0 !important;
+} 
+.MuiButton-outlinedPrimary{
+    color: var(--text) !important;
+    border: none !important;
+}
+.MuiButton-outlinedPrimary:hover{
+    color: var(--active) !important;
+    background-color: var(--nav) !important;
+}
+.body-dark{
+    position: absolute;
+    right: 0;
+    margin: 40px;
+    font-size: xxx-large;
+}
+.nav-dark{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 40px;
+    font-size: xxx-large;
+}
+.nav-dark:hover,.body-dark:hover{
+    color: var(--active)
+}
+.title{
+    font-size: xxx-large;
+    color: var(--heading);
+    font-family: 'Big Shoulders Stencil Text', cursive;
+}
+.item{
+    text-decoration: none;
+    color: var(--text) !important;
+}
+.item:hover,.tab:hover{
+    color: var(--active) !important;
+}
+
+/* Introduction */
+.content{
+    position: absolute;
+    top:31px;
+    height: 92%;
+    left: 25%;
+    width: 75%;
+    overflow-y: auto;
+}
+.inner-content{
+    margin: 5%;
+}
+.intro>h1{
+    font-family: 'Roboto', monospace !important;
+    color: var(--text);
+}
+.name{
+    font-size: 150px;
+    color: var(--heading);
+    font-family: 'Roboto', sans-serif;
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: var(--text) !important;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+/* Footer */
+footer{
+    height:3.5%;
+    background-color: var(--footer);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-shadow: -1px -4px 10px -2px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    z-index: 3;
+    text-align: center;
+    font-size: large;
+    font-family: 'Roboto Mono', monospace;
+}
+footer>a{
+    color: var(--text);
+}
+footer>span:hover{
+    color: var(--active);
+}
+.left{
+    float: left;
+    padding: 0 1%;
+}
+.right{
+    float: right;
+    padding: 0 1% 0 0;
+}
+.copy:hover{
+    color: var(--text);
+}
+/* Skills */
+.skills{
+    font-family: 'Roboto Mono', monospace;
+    color: var(--active);
+}
+h1{
+    color: var(--heading);
+}
+.skills-items>i{
+    font-size: inherit;
+}
+.skills-items>h1{
+    font-size: x-large;
+}
+.MuiGrid-root{
+    text-align: center;
+}
+.skill{
+    color: var(--text);
+    font-size: xxx-large;
+    padding: 20px;
+}
+.skill:hover{
+    color: var(--heading);
+}
+/* About */
+
+.about>p{
+    font-family: 'Roboto', monospace !important;
+    color: var(--text);
+    font-size: xx-large;
+}
+em{
+    font-family: 'Roboto Mono', monospace;
+    color: var(--heading) !important;
+}
+
+/* Experience */
+*{
+  padding: 0;
+  box-sizing: border-box;
+}
+.experience{
+    margin: 0;
+}
+.container {
+  font-family: 'Roboto Mono', monospace;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.timeline {
+  width: 92%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 20px;
+  background-color: var(--nav);
+  color: var(--active);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: gray;
+  }
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+  .timeline ul li:hover::before {
+    background-color: var(--heading);
+  }
+}
+
+/* Projects */
+.MuiCardContent-root{
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--nav);
+    color: var(--active);
+    text-align: left !important;
+    height: 250px !important;
+}
+.MuiChip-outlinedPrimary {
+    color: var(--heading) !important;
+    border: none !important;
+}
+.MuiCardContent-root>h1{
+    font-size: 20px;
+}
+.MuiChip-outlined {
+    background-color: transparent;
+    border: none !important;
+}
+.MuiChip-label{
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+.project{
+    height: 45%;
+}
+.MuiPaper-elevation1{
+    box-shadow: 0px -1px 10px -5px rgba(0,0,0,1) !important;
+    border-radius: 10px !important;
+}
+.MuiPaper-elevation1:hover{
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,1) !important;
+}
+.MuiPaper-root{
+    background-color: var(--body) !important;
+    border: none !important;
+}
+.link{
+    font-size: xx-large;
+    color: var(--text);
+}
+.link:hover{
+    color: var(--active);
+}
+.goto{
+    position: relative; 
+    left: 75%;
+    bottom: 70%;
+}
+/* Responsive */
+@media screen and (max-width: 1100px) {
+    .MuiPaper-elevation1:hover{
+        box-shadow: 0px -1px 10px -5px rgba(0,0,0,1) !important;
+    }
+    .skill:hover,.nav-dark:hover,.body-dark:hover,a:hover,.link:hover{
+        color: var(--text);
+    }
+    .nav{
+        display: none;
+    }
+    .content{
+        position: absolute;
+        top:0;
+        height: 100%;
+        left: 0%;
+        width: 100%;
+        padding: 3%;
+    }
+    .heading{
+        margin: 40px 0 !important;
+    }
+    .inner-content{
+        margin: 0;
+    }
+    .hide{
+        display: unset;
+    }
+    .intro{
+        height: 100vh;
+        padding: 15% 0;
+        padding-left: 5%;
+    }
+    .name{
+        font-size: 15vh;
+        color: var(--heading);
+        font-family: 'Roboto', sans-serif;
+    }
+    footer,.nav,header{
+        display: none;
+    }
+    .MuiGrid-root{
+        position: relative !important;
+        width: 100% !important;
+        margin: 0 !important;
+        /* padding: 0 !important; */
+    }
+    .container{
+        width: 100%;
+    }
+    .about>p{
+        font-size: x-large;
+    }
+    .about>em{
+        font-size: 1.5rem;
+    }
+    .timeline-content h1 {
+        font-size: 20px;
+    }
+    .hue-picker{
+        width: 280px !important;
+    } 
+    .picker{
+        position: absolute;
+        right: 0;
+        margin: 30px;
+        top:80px;
+        font-size: xxx-large;
+    }
+  } 
